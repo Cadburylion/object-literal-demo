@@ -1,38 +1,13 @@
 'use strict';
 
-var firstAndPike = {
-  title: '1st and Pike',
-  minCustomer: 23,
-  maxCustomer: 65,
-  avgCookie: 6.3,
-};
-
-var seaTacAirport = {
-  location: 'SeaTac Airport',
-  minCustomer: 3,
-  maxCustomer: 24,
-  avgCookie: 1.2,
-};
-
-var seattleCenter = {
-  location: 'Seattle Center',
-  minCustomer: 11,
-  maxCustomer: 38,
-  avgCookie: 3.7,
-};
-
-var capitolHill = {
-  location: 'Capitol Hill',
-  minCustomer: 20,
-  maxCustomer: 38,
-  avgCookie: 2.3,
-};
-
-var alki = {
-  location: 'Alki',
-  minCustomer: 2,
-  maxCustomer: 16,
-  avgCookie: 4.6,
+var groceryList = {
+  title: 'Sunday dinner',
+  items: [
+    'eggs',
+    'flower',
+    'peach',
+    'pasta',
+  ],
 };
 
 // set the title of the page (the h1 tag with id="title")
@@ -51,8 +26,8 @@ var ingredientLi;
 for (var i = 0; i < groceryList.items.length; i++){
   console.log('groceryList.items of i', groceryList.items[i]);
   ingredientLi = document.createElement('li'); // creates new element in HTML
-  ingredientLi.setAttribute('class', 'grocery-item')
-  ingredientLi.textConent = groceryList.items[i];
+  ingredientLi.setAttribute('class', 'grocery-item');
+  ingredientLi.textContent = groceryList.items[i];
   ingredientsUl.appendChild(ingredientLi);
 }
 
