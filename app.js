@@ -1,5 +1,7 @@
 'use strict';
 
+var storeHours = ['6am:', '7am:', '8am:', '9am:', '10am:', '11am:', '12pm:', '1pm:', '2pm:', '3pm:', '4pm:', '5pm:', '6pm:', '7pm:', '8pm:'];
+
 var firstAndPike = {
   title: '1st and Pike',
   minCustomer: 23,
@@ -7,9 +9,23 @@ var firstAndPike = {
   avgCookie: 6.3,
   cookiesAmmt: [],
   randoCustomer: function(){
-    return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }
+    for (var i = 0; i < 15; i++){
+      for (var j = 0; j < 15; j++) {
+
+     Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
+  }}
 }
+};
+
+// var myStringArray = ["Hello","World"];
+var arrayLength = myStringArray.length;
+for (var i = 0; i < arrayLength; i++) {
+    alert(myStringArray[i]); //
+
+var testFunction = function(){
+  console.log(firstAndPike.randoCustomer())
+}
+
   // randoCustomer: function() {
     // Math.floor(Math.random()*(this.maxCustomer-this.minCustomer+1)+1);
 
