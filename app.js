@@ -7,24 +7,41 @@ var firstAndPike = {
   minCustomer: 23,
   maxCustomer: 65,
   avgCookie: 6.3,
-  cookiesAmmt: [],
+  customersPerHour: [],
+  businessHours: [],
+  cookiesAmmt: [/*storeHours[0] + firstAndPike.customersPerHour[0]*/],
   randoCustomer: function(){
     for (var i = 0; i < 15; i++){
-      for (var j = 0; j < 15; j++) {
-
-     Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }}
+    //  console.log(Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer));
+      this.customersPerHour.push(Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer));
+   }
+   for (var j = 0; j < storeHours.length; j++) {
+     this.businessHours.push(storeHours[j]);
+  }
 }
 };
+// this.cookiesAmmt.push()
+//
+//
+// var numbers = [1, 2, 3];
+// numbers.push(4);
+//
+// // console.log(numbers); // [1, 2, 3, 4]
+//
+// numbers.push(5, 6, 7);
+
+// console.log(numbers); // [1, 2, 3, 4, 5, 6, 7]
+
 
 // var myStringArray = ["Hello","World"];
-var arrayLength = myStringArray.length;
-for (var i = 0; i < arrayLength; i++) {
-    alert(myStringArray[i]); //
+// var arrayLength = myStringArray.length;
+// for (var i = 0; i < arrayLength; i++) {
+//     alert(myStringArray[i]); //
 
-var testFunction = function(){
-  console.log(firstAndPike.randoCustomer())
-}
+// var testFunction = function(){
+//   console.log(firstAndPike.randoCustomer())
+// }
+// };
 
   // randoCustomer: function() {
     // Math.floor(Math.random()*(this.maxCustomer-this.minCustomer+1)+1);
@@ -47,50 +64,50 @@ var testFunction = function(){
 // function randomIntFromInterval(min,max)
 // {
 // console.log(Math.floor(Math.random()*(10-1+1)+1));// }
-
-var seaTacAirport = {
-  location: 'SeaTac Airport',
-  minCustomer: 3,
-  maxCustomer: 24,
-  avgCookie: 1.2,
-  cookiesAmmt: [],
-  randoCustomer: function(){
-    return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }
-};
-
-var seattleCenter = {
-  location: 'Seattle Center',
-  minCustomer: 11,
-  maxCustomer: 38,
-  avgCookie: 3.7,
-  cookiesAmmt: [],
-  randoCustomer: function(){
-    return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }
-};
-
-var capitolHill = {
-  location: 'Capitol Hill',
-  minCustomer: 20,
-  maxCustomer: 38,
-  avgCookie: 2.3,
-  cookiesAmmt: [],
-  randoCustomer: function(){
-    return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }
-};
-
-var alki = {
-  location: 'Alki',
-  minCustomer: 2,
-  maxCustomer: 16,
-  avgCookie: 4.6,
-  cookiesAmmt: [],
-  randoCustomer: function(){
-    return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
-  }
-};
+//
+// var seaTacAirport = {
+//   location: 'SeaTac Airport',
+//   minCustomer: 3,
+//   maxCustomer: 24,
+//   avgCookie: 1.2,
+//   cookiesAmmt: [],
+//   randoCustomer: function(){
+//     return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
+//   }
+// };
+//
+// var seattleCenter = {
+//   location: 'Seattle Center',
+//   minCustomer: 11,
+//   maxCustomer: 38,
+//   avgCookie: 3.7,
+//   cookiesAmmt: [],
+//   randoCustomer: function(){
+//     return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
+//   }
+// };
+//
+// var capitolHill = {
+//   location: 'Capitol Hill',
+//   minCustomer: 20,
+//   maxCustomer: 38,
+//   avgCookie: 2.3,
+//   cookiesAmmt: [],
+//   randoCustomer: function(){
+//     return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
+//   }
+// };
+//
+// var alki = {
+//   location: 'Alki',
+//   minCustomer: 2,
+//   maxCustomer: 16,
+//   avgCookie: 4.6,
+//   cookiesAmmt: [],
+//   randoCustomer: function(){
+//     return Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer);
+//   }
+// };
 
 // // set the title of the page (the h1 tag with id="title")
 //
@@ -114,4 +131,4 @@ var alki = {
 // }
 
 
-console.log('shark in the dark!');
+// console.log('shark in the dark!');
