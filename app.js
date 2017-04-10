@@ -11,14 +11,17 @@ var firstAndPike = {
   businessHours: [],
   cookiesAmmt: [/*storeHours[0] + firstAndPike.customersPerHour[0]*/],
   randoCustomer: function(){
+    for (var j = 0; j < storeHours.length; j++) {
+      this.businessHours.push(storeHours[j]);
+    }
     for (var i = 0; i < 15; i++){
-    //  console.log(Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer));
-      this.customersPerHour.push(Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer));
-   }
-   for (var j = 0; j < storeHours.length; j++) {
-     this.businessHours.push(storeHours[j]);
+      //  console.log(Math.floor(Math.random()*(this.maxCustomer-this.minCustomer)+this.minCustomer));
+      this.customersPerHour.push(storeHours[i] + ' ' +  Math.floor(Math.random()*(this.maxCustomer-this.minCustomer) + this.minCustomer) + ' cookies');
+    }
+    // for (var j = 0; j < storeHours.length; j++) {
+    //   this.businessHours.push(storeHours[j]);
+    // }
   }
-}
 };
 // this.cookiesAmmt.push()
 //
