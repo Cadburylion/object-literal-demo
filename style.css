@@ -1,12 +1,29 @@
 /* reset */
 
-* {
+/** {
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box; /*padding can't affect box size*/
+
+
+/*html, body {
+  height: 100%;
+}*/
+
+* {
+  border: 2px blue dotted;
 }
 
-html, body {
-  height: 100%;
+main {
+  position: relative;
+}
+
+.fish-container {
+}
+
+img#logo {
+  width: 50%;
+  padding: 0 25%;
+  position: absolute;
 }
