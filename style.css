@@ -15,6 +15,11 @@
   border: 2px blue dotted;
 }
 
+body {
+  background-color: #91AA9D;
+  background: url(images/salmong.png) no-repeat top center;
+}
+
 main {
   position: relative;
 }
