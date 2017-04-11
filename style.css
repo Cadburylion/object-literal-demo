@@ -1,23 +1,31 @@
 /* reset */
 
-/** {
+* {
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box; /*padding can't affect box size*/
+  font-weight: normal;
+}
 
-
-/*html, body {
+html, body {
   height: 100%;
-}*/
-
-* {
-  border: 2px blue dotted;
 }
 
 body {
-  background-color: #91AA9D;
-  background: url(images/salmong.png) no-repeat top center;
+  background-color: #FCFFF5;
+}
+
+.right {
+  float:right;
+}
+
+.left {
+  float: left;
+}
+
+.clear-fix {
+  clear: both;
 }
 
 main {
@@ -28,7 +36,9 @@ main {
 }
 
 img#logo {
+  display: block;
   width: 50%;
-  padding: 0 25%;
-  position: absolute;
+  /*padding: 0 25%;*/
+  margin: 0 auto;
+  /*position: relative;*/
 }
