@@ -2,7 +2,6 @@
 
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-
 // Cookie Shop Object Constructor
 function CookieShop(title, minCustomer, maxCustomer, avgCookie){
   this.title = title;
@@ -11,13 +10,12 @@ function CookieShop(title, minCustomer, maxCustomer, avgCookie){
   this.avgCookie = avgCookie;
   this.totalCookies = 0;
   this.cookiesPerHour = [];
-
 }
 
-
 CookieShop.prototype.getHourlyCookies = function(maxCust, minCust, avgCookie){
-  return Math.round(Math.floor(Math.random()*(maxCust-minCust + 1) + minCust) * avgCookie);
-
+  var cookies = Math.round(Math.floor(Math.random()*(maxCust-minCust + 1) + minCust) * avgCookie);
+  this.totalCookies += cookies;
+  return cookies;
 };
 
 CookieShop.prototype.getCookiesPerHour = function(){
@@ -25,12 +23,6 @@ CookieShop.prototype.getCookiesPerHour = function(){
     this.cookiesPerHour.push(this.getHourlyCookies(this.maxCustomer, this.minCustomer, this.avgCookie));
   }
 };
-
-// CookieShop.prototype.printCookiesHours = function(){
-// for (var i = 0; i < 15; i ++){
-
-
-
 
 CookieShop.prototype.getTable = function(){
   // var table = document.createElement('table');
@@ -49,15 +41,10 @@ CookieShop.prototype.getTable = function(){
   for(var i = 0; i < this.cookiesPerHour.length; i++){
     var itemName = document.createElement('td');
 
-
     titleRow.appendChild(itemName);
     itemName.textContent = this.cookiesPerHour[i];
   }
-
-
 };
-
-
 
 var getStoreHours = function() {
 
@@ -75,13 +62,10 @@ var getStoreHours = function() {
   app.appendChild(hoursRow); // adding the hours row to the page
 };
 
-
-// var x = document.createElement('TABLE');
 var firstAndPike = new CookieShop('1st and Pike', 23, 65, 6.3);
 getStoreHours();
 firstAndPike.getCookiesPerHour();
 firstAndPike.getTable();
-
 
 var seaTacAirport = new CookieShop('SeaTac Airport', 3, 24, 1.2);
 seaTacAirport.getCookiesPerHour();
