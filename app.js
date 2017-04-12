@@ -103,17 +103,17 @@ function handleStoreCreateSubmit(event){
   // stop the browser from reloading
   event.preventDefault();
 
-  var form = event.target;
+  var form = event.target; // event target is always the object you added the event listener to
 
   // grab the values
   var name = form.storeName.value;
-  console.log('store name', name);
+  // console.log('store name', name);
   var maximumCustomers = form.storeMaximumCustomers.value;
-  console.log('maximum customers', maximumCustomers);
+  // console.log('maximum customers', maximumCustomers);
   var minimumCustomers = form.storeMinimumCustomers.value;
-  console.log('minimum customers', minimumCustomers);
+  // console.log('minimum customers', minimumCustomers);
   var averageCookies = form.storeAverageCookies.value;
-  console.log('average cookies', averageCookies);
+  // console.log('average cookies', averageCookies);
 
   var newStore = new CookieShop(name, minimumCustomers, maximumCustomers, averageCookies);
   newStore.getCookiesPerHour();

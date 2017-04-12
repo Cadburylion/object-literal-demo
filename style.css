@@ -43,6 +43,15 @@ td {
   border: 1px solid black;
 }
 
+#title {
+  font-family: Indie Flower;
+  font-size: 8em;
+}
+
+#sales-title {
+  font-family: Arial;
+}
+
 h1 {
   margin: 0 auto;
   background-color: #D1DBBD;
@@ -62,6 +71,17 @@ h1 {
 
 }
 
+#home-button {
+  display: block;
+  width: 100px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
 .right {
   float:right;
 }
@@ -79,14 +99,31 @@ main {
 }
 
 .fish-container {
+  display: block;
+  width: 50%;
+  margin: auto;
 }
 
 #logo {
   display: block;
   width: ;
   /*padding: 0 25%;*/
-  margin: 0 auto;
+  margin: 10px auto;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
   /*position: relative;*/
+}
+
+#main-content {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-top-left-radius: 30%;
+  border-top-right-radius: 30%;
+  background-color: white;
+  height: 100%;
+  width: 75%;
+  margin: auto;
 }
 
 tr {
