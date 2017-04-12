@@ -17,21 +17,20 @@ CookieShop.prototype.getHourlyCookies = function(maxCust, minCust, avgCookie){
 };
 
 CookieShop.prototype.getCookiesPerHour = function(){
-  for (var i = 0; i < 15; i++){
+  for (var i = 0; i < storeHours.length; i++){
     this.cookiesPerHour.push(this.getHourlyCookies(this.maxCustomer, this.minCustomer, this.avgCookie));
   }
 };
 
 CookieShop.prototype.getTable = function(){
-  var titleHeading = document.createElement('th');
+  var storeName = document.createElement('th');
   var titleRow = document.createElement('tr');
-
-  var app = document.getElementById('app');
+  // var app = document.getElementById('app');
 
   app.appendChild(titleRow);
 
-  titleHeading.textContent = this.title;
-  titleRow.appendChild(titleHeading);
+  storeName.textContent = this.title;
+  titleRow.appendChild(storeName);
   // create a new row for each item and add it to the table
   console.log(this.cookiesPerHour.length);
   for(var i = 0; i < this.cookiesPerHour.length; i++){
@@ -48,22 +47,26 @@ CookieShop.prototype.getTable = function(){
 var getStoreHours = function() {
 
   var hoursRow = document.createElement('tr'); // creates a row to add to
-  var emptyCell = document.createElement('td'); // creates an empty cell
+  var emptyCell = document.createElement('th'); // creates an empty cell
+  emptyCell.textContent = 'Locations';
   hoursRow.appendChild(emptyCell); // adds empty cell to the hoursRow
   for (var i = 0; i < storeHours.length; i++){ // creates amount of new cells = to store hours
-    var hoursCell = document.createElement('td');
+    var hoursCell = document.createElement('th');
     hoursCell.textContent = storeHours[i]; // populating cells with data
     hoursRow.appendChild(hoursCell); // adds cells into the row
     // console.log(storeHours[i])
   }
-  var app = document.getElementById('app'); // setting app to reference to element with id of app
+
+  // var app = document.getElementById('app'); // setting app to reference to element with id of app
 
   app.appendChild(hoursRow); // adding the hours row to the page
 
-  var totalCell = document.createElement('td');
-  hoursRow.appendChild(totalCell);
-  totalCell.textContent = 'Totals';  
+  var totalCell = document.createElement('td'); // creates empty cell
+  hoursRow.appendChild(totalCell); // appends cell to hoursRow row
+  totalCell.textContent = 'Totals'; // writes 'Totals' into cell
 };
+
+var app = document.getElementById('app');
 
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
