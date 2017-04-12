@@ -1,7 +1,5 @@
 'use strict';
 
-var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-
 // Cookie Shop Object Constructor
 function CookieShop(title, minCustomer, maxCustomer, avgCookie){
   this.title = title;
@@ -25,10 +23,8 @@ CookieShop.prototype.getCookiesPerHour = function(){
 };
 
 CookieShop.prototype.getTable = function(){
-  // var table = document.createElement('table');
-  var titleRow = document.createElement('tr');
-  // var x = document.createElement('td')
   var titleHeading = document.createElement('th');
+  var titleRow = document.createElement('tr');
 
   var app = document.getElementById('app');
 
@@ -44,6 +40,9 @@ CookieShop.prototype.getTable = function(){
     titleRow.appendChild(itemName);
     itemName.textContent = this.cookiesPerHour[i];
   }
+  var totalCell = document.createElement('td');
+  titleRow.appendChild(totalCell);
+  totalCell.textContent = this.totalCookies;
 };
 
 var getStoreHours = function() {
@@ -60,10 +59,17 @@ var getStoreHours = function() {
   var app = document.getElementById('app'); // setting app to reference to element with id of app
 
   app.appendChild(hoursRow); // adding the hours row to the page
+
+  var totalCell = document.createElement('td');
+  hoursRow.appendChild(totalCell);
+  totalCell.textContent = 'Totals';  
 };
 
-var firstAndPike = new CookieShop('1st and Pike', 23, 65, 6.3);
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
 getStoreHours();
+
+var firstAndPike = new CookieShop('1st and Pike', 23, 65, 6.3);
 firstAndPike.getCookiesPerHour();
 firstAndPike.getTable();
 

@@ -40,12 +40,12 @@ h1 {
 
 #wrapper {
   height: auto;
-  width: 900px;
+  width: 940px;
   max-width: 70%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
   background-color: #FCFFF5;
-  border-radius: 100px; 
+  border-radius: 70px;
 
 }
 
