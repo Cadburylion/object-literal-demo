@@ -10,13 +10,15 @@
 }
 
 @font-face {
-  font-family: 'Macondo', cursive;
+  /*font-family: 'Macondo', cursive;*/
+  font-family: 'Indie Flower', cursive;
   src: url('https://fonts.googleapis.com/css?family=Macondo');
+  src: url('https://fonts.googleapis.com/css?family=Indie+Flower');
 }
 
 html, body {
   height: 100%;
-  font-family: Macondo;
+  /*font-family: Indie Flower;*/
   size: 3em;
 }
 
@@ -29,6 +31,16 @@ table {
   width: 50%;
   font-size: 1.5em;
   margin: 20px auto;
+}
+
+td {
+  border: 1px solid black;
+}
+
+#create-new-store {
+  width: 35%;
+  margin: auto;
+  border: 1px solid black;
 }
 
 h1 {

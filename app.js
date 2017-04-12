@@ -61,7 +61,7 @@ var getStoreHours = function() {
 
   app.appendChild(hoursRow); // adding the hours row to the page
 
-  var totalCell = document.createElement('td'); // creates empty cell
+  var totalCell = document.createElement('th'); // creates empty cell
   hoursRow.appendChild(totalCell); // appends cell to hoursRow row
   totalCell.textContent = 'Totals'; // writes 'Totals' into cell
 };
@@ -92,11 +92,11 @@ var alki = new CookieShop('Alki', 2, 16, 4.6);
 alki.getCookiesPerHour();
 alki.getTable();
 
+
 // event listens to submit
 // take user input on submit
 // input user input into object Constructor
 // append results to table
-
 
 
 function handleStoreCreateSubmit(event){
@@ -124,10 +124,8 @@ function handleStoreCreateSubmit(event){
   form.storeMaximumCustomers.value = '';
   form.storeMinimumCustomers.value = '';
   form.storeAverageCookies.value = '';
-
-
-
 }
-//
+
+
 var storeCreateFrom = document.getElementById('create-new-store');
 storeCreateFrom.addEventListener('submit', handleStoreCreateSubmit);
