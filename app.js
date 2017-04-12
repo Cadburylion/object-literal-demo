@@ -32,7 +32,7 @@ CookieShop.prototype.getTable = function(){
   storeName.textContent = this.title;
   titleRow.appendChild(storeName);
   // create a new row for each item and add it to the table
-  console.log(this.cookiesPerHour.length);
+  // console.log(this.cookiesPerHour.length);
   for(var i = 0; i < this.cookiesPerHour.length; i++){
     var itemName = document.createElement('td');
 
@@ -91,3 +91,43 @@ capitolHill.getTable();
 var alki = new CookieShop('Alki', 2, 16, 4.6);
 alki.getCookiesPerHour();
 alki.getTable();
+
+// event listens to submit
+// take user input on submit
+// input user input into object Constructor
+// append results to table
+
+
+
+function handleStoreCreateSubmit(event){
+  // stop the browser from reloading
+  event.preventDefault();
+
+  var form = event.target;
+
+  // grab the values
+  var name = form.storeName.value;
+  console.log('store name', name);
+  var maximumCustomers = form.storeMaximumCustomers.value;
+  console.log('maximum customers', maximumCustomers);
+  var minimumCustomers = form.storeMinimumCustomers.value;
+  console.log('minimum customers', minimumCustomers);
+  var averageCookies = form.storeAverageCookies.value;
+  console.log('average cookies', averageCookies);
+
+  var newStore = new CookieShop(name, minimumCustomers, maximumCustomers, averageCookies);
+  newStore.getCookiesPerHour();
+  newStore.getTable();
+
+  // then clear the values
+  form.storeName.value = '';
+  form.storeMaximumCustomers.value = '';
+  form.storeMinimumCustomers.value = '';
+  form.storeAverageCookies.value = '';
+
+
+
+}
+//
+var storeCreateFrom = document.getElementById('create-new-store');
+storeCreateFrom.addEventListener('submit', handleStoreCreateSubmit);
