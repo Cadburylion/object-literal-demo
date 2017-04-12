@@ -68,11 +68,7 @@ var app = document.getElementById('app');
 var xmas = new GroceryList('xmas', 'slugbyte');
 xmas.addItem('eggs');
 xmas.addItem('beans');
-xmas.addItem('beans');
-xmas.addItem('beans');
-xmas.addItem('beans');
-xmas.addItem('beans');
-xmas.addItem('beans');
+
 var xmasTable = xmas.getTable();
 app.appendChild(xmasTable);
 
