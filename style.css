@@ -6,11 +6,18 @@
   padding: 0;
   box-sizing: border-box; /*padding can't affect box size*/
   font-weight: normal;
-  border: 2px black solid
+  border: 1px black solid
+}
+
+@font-face {
+  font-family: 'Macondo', cursive;
+  src: url('https://fonts.googleapis.com/css?family=Macondo');
 }
 
 html, body {
   height: 100%;
+  font-family: Macondo;
+  size: 3em;
 }
 
 body {

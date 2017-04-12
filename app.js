@@ -27,7 +27,7 @@ CookieShop.prototype.getCookiesPerHour = function(){
 };
 
 // CookieShop.prototype.printCookiesHours = function(){
-  // for (var i = 0; i < 15; i ++){
+// for (var i = 0; i < 15; i ++){
 
 
 
@@ -44,35 +44,41 @@ CookieShop.prototype.getTable = function(){
 
   titleHeading.textContent = this.title;
   titleRow.appendChild(titleHeading);
-  // table.appendChild(titleRow);
-
-  // var itemRow = document.createElement('tr');
-    // create a new row for each item and add it to the table
-    console.log(this.cookiesPerHour.length)
+  // create a new row for each item and add it to the table
+  console.log(this.cookiesPerHour.length);
   for(var i = 0; i < this.cookiesPerHour.length; i++){
     var itemName = document.createElement('td');
 
-    // itemName.textContent = storeHours[i];
-    // console.log(storeHours[i])
-    // itemName.textContent = this.items[i].name;
-    // itemPrice.textContent = this.items[i].price;
 
     titleRow.appendChild(itemName);
-    itemName.textContent = this.cookiesPerHour[i]
+    itemName.textContent = this.cookiesPerHour[i];
   }
 
 
-  // table.appendChild(itemRow);
 };
 
 
 
-var getStoreHours = function() {itemName.textContent = storeHours[i];
-console.log(storeHours[i])
-}
+var getStoreHours = function() {
+
+  var hoursRow = document.createElement('tr'); // creates a row to add to
+  var emptyCell = document.createElement('td'); // creates an empty cell
+  hoursRow.appendChild(emptyCell); // adds empty cell to the hoursRow
+  for (var i = 0; i < storeHours.length; i++){ // creates amount of new cells = to store hours
+    var hoursCell = document.createElement('td');
+    hoursCell.textContent = storeHours[i]; // populating cells with data
+    hoursRow.appendChild(hoursCell); // adds cells into the row
+    // console.log(storeHours[i])
+  }
+  var app = document.getElementById('app'); // setting app to reference to element with id of app
+
+  app.appendChild(hoursRow); // adding the hours row to the page
+};
+
 
 // var x = document.createElement('TABLE');
 var firstAndPike = new CookieShop('1st and Pike', 23, 65, 6.3);
+getStoreHours();
 firstAndPike.getCookiesPerHour();
 firstAndPike.getTable();
 
