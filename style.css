@@ -19,30 +19,39 @@
 html, body {
   height: 100%;
   /*font-family: Indie Flower;*/
-  size: 3em;
+  /*size: 3em;*/
+
+  /*background-color: #EFAAAE;*/
+
+  background: url(images/seattle-evening-wheel.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-body {
+/*body {*/
+
 
   /* IE10 Consumer Preview */
-  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+  /*background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);*/
 
   /* Mozilla Firefox */
-  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+  /*background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);*/
 
   /* Opera */
-  background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+  /*background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);*/
 
   /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFAAAE));
+  /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFAAAE));*/
 
   /* Webkit (Chrome 11+) */
-  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+  /*background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);*/
 
   /* W3C Markup, IE10 Release Preview */
-  background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);
+  /*background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);*/
 
-}
+/*}*/
 
 #title {
   font-family: Indie Flower;
@@ -67,6 +76,11 @@ h1 {
   border: 1px solid black;
 
 }
+
+/*#alki-pic {
+  border-radius: 100%;
+  width: 200px;
+}*/
 
 a {
   text-decoration: none;
@@ -94,20 +108,42 @@ main {
   margin: auto;
 }
 
-#logo {
-  display: block;
-  width: 100%%;
-  margin: 10px auto;
+#empty-space {
+  height: 100px;
 }
 
+/*#logo {
+  display: inline-block;
+  width: 1300px;
+  /*float: right;*/
+  /*margin-right: 40px;*/
+
+
 #main-content {
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
-  border-top-left-radius: 7%;
-  border-top-right-radius: 7%;
-  background-color: white;
+  border-top: 4px solid salmon;
+  border-right: 4px solid salmon;
+  border-left: 4px solid salmon;
+  border-top-left-radius: 1%;
+  border-top-right-radius: 1%;
+  /*background-color: white;*/
   height: 100%;
   width: 70%;
   margin: auto;
+  /* IE10 Consumer Preview */
+  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+
+  /* Opera */
+  background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFAAAE));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);
 }
