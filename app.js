@@ -10,54 +10,61 @@ function CookieShop(title, minCustomer, maxCustomer, avgCookie){
   this.cookiesPerHour = [];
 }
 
-CookieShop.prototype.getHourlyCookies = function(maxCust, minCust, avgCookie){
-  var cookies = Math.round(Math.floor(Math.random()*(maxCust-minCust + 1) + minCust) * avgCookie);
+// CookieShop.prototype.getCookies = function(){
+//   var customerPerHour = this.maxCustomer - this.minCustomer;
+//   var customers, cookies;
+//   for (var i = 0; i < storeHours.length; i++){
+//     customers = Math.random() * customerPerHour + this.minCustomer;
+//     cookies = Math.floor(customers * this.avgCookie);
+//     this.cookiesPerHour.push(cookies);
+//     this.totalCookies += cookies;
+//   }
+// };
+
+// populates array of random number
+CookieShop.prototype.getCookiesPerHour = function(){
+  for (var i = 0; i < storeHours.length; i++){
+    this.cookiesPerHour.push(this.getCookies(this.maxCustomer, this.minCustomer, this.avgCookie));
+  }
+};
+
+CookieShop.prototype.getCookies = function(maxCust, minCust, avgCookie){
+  var cookies = Math.round(Math.floor(Math.random()*(maxCust-minCust + 1) + minCust) * avgCookie) + 1;
   this.totalCookies += cookies;
   return cookies;
 };
 
-CookieShop.prototype.getCookiesPerHour = function(){
-  for (var i = 0; i < storeHours.length; i++){
-    this.cookiesPerHour.push(this.getHourlyCookies(this.maxCustomer, this.minCustomer, this.avgCookie));
-  }
-};
-
 CookieShop.prototype.getTable = function(){
-  var storeName = document.createElement('th');
-  var titleRow = document.createElement('tr');
-  // var app = document.getElementById('app');
+  var titleRow = document.createElement('tr'); // creates row
+  app.appendChild(titleRow); // adds title row to table element with id of app
 
-  app.appendChild(titleRow);
+  var storeName = document.createElement('th'); // creates th cell
+  storeName.textContent = this.title; // sets content of of th element
+  titleRow.appendChild(storeName); // adds th element to title row
 
-  storeName.textContent = this.title;
-  titleRow.appendChild(storeName);
-  // create a new row for each item and add it to the table
-  // console.log(this.cookiesPerHour.length);
   for(var i = 0; i < this.cookiesPerHour.length; i++){
-    var itemName = document.createElement('td');
+    var cookieHour = document.createElement('td'); // create td cell for each hour
 
-    titleRow.appendChild(itemName);
-    itemName.textContent = this.cookiesPerHour[i];
+    titleRow.appendChild(cookieHour); // adds cookieHour cells to title row
+    cookieHour.textContent = this.cookiesPerHour[i]; // sets content of each cookieHour cell
   }
-  var totalCell = document.createElement('td');
+
+  var totalCell = document.createElement('td'); // creates td cell
   titleRow.appendChild(totalCell);
   totalCell.textContent = this.totalCookies;
 };
 
-var getStoreHours = function() {
+var getStoreHours = function() { // creates a row of store hours
 
   var hoursRow = document.createElement('tr'); // creates a row to add to
-  var emptyCell = document.createElement('th'); // creates an empty cell
-  emptyCell.textContent = 'Locations';
-  hoursRow.appendChild(emptyCell); // adds empty cell to the hoursRow
+  var locationCell = document.createElement('th'); // creates an empty cell
+  locationCell.textContent = 'Locations';
+  hoursRow.appendChild(locationCell); // adds empty cell to the hoursRow
   for (var i = 0; i < storeHours.length; i++){ // creates amount of new cells = to store hours
     var hoursCell = document.createElement('th');
     hoursCell.textContent = storeHours[i]; // populating cells with data
     hoursRow.appendChild(hoursCell); // adds cells into the row
-    // console.log(storeHours[i])
   }
-
-  // var app = document.getElementById('app'); // setting app to reference to element with id of app
 
   app.appendChild(hoursRow); // adding the hours row to the page
 
@@ -70,7 +77,7 @@ var app = document.getElementById('app');
 
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-getStoreHours();
+getStoreHours(); // generates row of store hours at top of table
 
 var firstAndPike = new CookieShop('1st and Pike', 23, 65, 6.3);
 firstAndPike.getCookiesPerHour();
@@ -115,17 +122,18 @@ function handleStoreCreateSubmit(event){
   var averageCookies = form.storeAverageCookies.value;
   // console.log('average cookies', averageCookies);
 
-  var newStore = new CookieShop(name, minimumCustomers, maximumCustomers, averageCookies);
-  newStore.getCookiesPerHour();
-  newStore.getTable();
+  var store = new CookieShop(name, minimumCustomers, maximumCustomers, averageCookies);
+  store.getCookiesPerHour();
+  store.getTable();
 
   // then clear the values
-  form.storeName.value = '';
-  form.storeMaximumCustomers.value = '';
-  form.storeMinimumCustomers.value = '';
-  form.storeAverageCookies.value = '';
+  form.reset();
+
+  // form.storeName.value = '';
+  // form.storeMaximumCustomers.value = '';
+  // form.storeMinimumCustomers.value = '';
+  // form.storeAverageCookies.value = '';
 }
 
-
-var storeCreateFrom = document.getElementById('create-new-store');
-storeCreateFrom.addEventListener('submit', handleStoreCreateSubmit);
+var storeCreateForm = document.getElementById('create-new-store');
+storeCreateForm.addEventListener('submit', handleStoreCreateSubmit);
