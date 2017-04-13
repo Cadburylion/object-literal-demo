@@ -23,24 +23,25 @@ html, body {
 }
 
 body {
-  background-color: #D1DBBD;
 
-}
+  /* IE10 Consumer Preview */
+  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
 
-table {
-  width: 50%;
-  font-size: 1.5em;
-  margin: 20px auto;
-}
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
 
-td {
-  border: 1px solid black;
-}
+  /* Opera */
+  background-image: -o-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
 
-#create-new-store {
-  width: 35%;
-  margin: auto;
-  border: 1px solid black;
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #EFAAAE));
+
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
+
+  /* W3C Markup, IE10 Release Preview */
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);
+
 }
 
 #title {
@@ -48,13 +49,9 @@ td {
   font-size: 8em;
 }
 
-#sales-title {
-  font-family: Arial;
-}
-
 h1 {
   margin: 0 auto;
-  background-color: #D1DBBD;
+  /*background-color: #D1DBBD;*/
   text-align: center;
   font-size: 5em;
 }
@@ -106,26 +103,18 @@ main {
 
 #logo {
   display: block;
-  width: ;
-  /*padding: 0 25%;*/
+  width: 100%%;
   margin: 10px auto;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  /*position: relative;*/
 }
 
 #main-content {
   border-top: 2px solid black;
   border-right: 2px solid black;
   border-left: 2px solid black;
-  border-top-left-radius: 30%;
-  border-top-right-radius: 30%;
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
   background-color: white;
   height: 100%;
-  width: 75%;
+  width: 70%;
   margin: auto;
-}
-
-tr {
-  text-align: center;
 }
