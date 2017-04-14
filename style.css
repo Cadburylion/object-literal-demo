@@ -76,6 +76,10 @@ html, body {
   margin: 25px;
 }
 
+#pike {
+  width: 200px;
+  display: inline;
+}
 
 #seattle-center {
 
