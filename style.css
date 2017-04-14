@@ -41,24 +41,54 @@ html, body {
   border-top: 4px dashed #FA8072;
 }
 
-#pike {
+#pike-pic {
+  border-radius: 50%;
+  width:200px;
+  display: inline;
+  margin: 25px;
 }
 
 #alki-pic{
-  border-radius: 100%;
-  width: 20%;
+  border-radius: 50%;
+  width: 200px;
+  display: inline;
+  margin: 25px;
 }
 
-#seatac {
-
+#capitolhill-pic {
+  border-radius: 50%;
+  width: 200px;
+  display: inline;
+  margin: 25px;
 }
+
+#seatac-pic {
+  border-radius: 50%;
+  width: 200px;
+  display: inline;
+  margin: 25px;
+}
+
+#seattle-center-pic {
+  border-radius: 50%;
+  width: 200px;
+  display: inline;
+  margin: 25px;
+}
+
 
 #seattle-center {
 
 }
 
 #alki {
+  display: inline;
 
+}
+
+#locations{
+  display: inline-block;
+  width: auto;
 }
 
 h1 {
