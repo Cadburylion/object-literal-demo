@@ -1,11 +1,9 @@
-/* reset */
-
 * {
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box; /*padding can't affect box size*/
-  font-weight: normal;
+  /*font-weight: normal;*/
   /*border: 1px black solid*/
 }
 
@@ -18,63 +16,36 @@
 
 html, body {
   height: 100%;
-  /*font-family: Indie Flower;*/
-  /*size: 3em;*/
+}
 
-  /*background-color: #EFAAAE;*/
+body {
 
   background: url(images/seattle-evening-wheel.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
 }
 
-#title {
+/*#title {
   font-family: Indie Flower;
   font-size: 8em;
-}
+}*/
 
 #store-information {
   font-family: verdana;
-  font-size: 3em;
+  font-size: 2em;
   border-top: 4px dashed #FA8072;
 }
 
-#pike-pic {
+.round-pic {
   border-radius: 50%;
-  width:200px;
-  display: inline;
-  margin: 25px;
+  width:15%;
+  display: inline-block;
+  margin: 2%;
 }
 
-#alki-pic{
-  border-radius: 50%;
-  width: 200px;
-  display: inline;
-  margin: 25px;
-}
-
-#capitolhill-pic {
-  border-radius: 50%;
-  width: 200px;
-  display: inline;
-  margin: 25px;
-}
-
-#seatac-pic {
-  border-radius: 50%;
-  width: 200px;
-  display: inline;
-  margin: 25px;
-}
-
-#seattle-center-pic {
-  border-radius: 50%;
-  width: 200px;
-  display: inline;
-  margin: 25px;
-}
 
 #pike {
   width: 200px;
@@ -97,33 +68,19 @@ html, body {
 
 h1 {
   margin: 0 auto;
-  /*background-color: #D1DBBD;*/
   text-align: center;
   font-size: 2em;
 }
 
 h2 {
-  display: inline;
+  display: inline-block;
   width: auto;
 }
 
 p {
-  display: inline;
+  display: inline-block;
   width: auto;
 }
-
-#wrapper {
-  height: auto;
-  width: 940px;
-  max-width: 70%;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #FCFFF5;
-  border-radius: 70px;
-  border: 1px solid black;
-
-}
-
 
 a {
   text-decoration: none;
@@ -141,18 +98,38 @@ a {
   clear: both;
 }
 
-main {
+/*main {
   position: relative;
-}
-
-.fish-container {
-  display: block;
-  /*width: 50%;*/
-  margin: auto;
-}
+}*/
 
 #empty-space {
   height: 100px;
+}
+
+#pike-info {
+margin-left: 45px;
+}
+
+#caphill-info {
+margin-left: 100px;
+}
+
+#seatac-info {
+margin-left: 115px;
+}
+
+#seacenter-info {
+margin-left: 105px;
+}
+
+#alki-info {
+margin-left: 115px;
+width: auto;
+}
+
+.loc-time {
+margin: 0 auto;
+width: auto;
 }
 
 
@@ -164,8 +141,9 @@ main {
   border-top-right-radius: 1%;
   /*background-color: white;*/
   height: 100%;
-  width: 70%;
+  width: 960px;
   margin: auto;
+  overflow: visible;
   /* IE10 Consumer Preview */
   background-image: -ms-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
 
@@ -182,5 +160,5 @@ main {
   background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #EFAAAE 100%);
 
   /* W3C Markup, IE10 Release Preview */
-  background-image: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);
+  background-imag e: linear-gradient(to bottom, #FFFFFF 0%, #EFAAAE 100%);
 }
