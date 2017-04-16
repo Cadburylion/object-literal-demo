@@ -66,12 +66,14 @@ body {
 }
 
 #family-pic-box {
+  padding-bottom: 4px;
   /*border-left: 4px solid salmon;*/
   /*border-right: 4px solid salmon;*/
 }
 
 #diy {
   border-top: 4px solid salmon;
+  padding-top: 8px;
 }
 
 #diy-paragraph {
@@ -90,13 +92,24 @@ body {
   margin-left: 10px;
 }
 
+#shirt {
+  border-top: 4px solid salmon;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 #shirt-pic {
-  
+  width: 49%;
+}
+
+#shirt-paragraph {
+  font-size: 2.5em;
 }
 
 #chinook {
   background-color: white;
   border-top: 4px solid salmon;
+  border-bottom: 4px solid salmon;
 }
 
 #chinook-pic {
@@ -199,12 +212,12 @@ a {
   position: relative;
 }*/
 
-#empty-space {
+.empty-space {
   height: 100px;
 }
 
 #pike-info {
-margin-left: 45px;
+margin-left: 40px;
 }
 
 #caphill-info {
@@ -212,15 +225,15 @@ margin-left: 100px;
 }
 
 #seatac-info {
-margin-left: 115px;
+margin-left: 120px;
 }
 
 #seacenter-info {
-margin-left: 105px;
+margin-left: 115px;
 }
 
 #alki-info {
-margin-left: 115px;
+margin-left: 120px;
 width: auto;
 }
 
