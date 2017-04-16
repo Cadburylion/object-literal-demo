@@ -39,6 +39,23 @@ body {
   border-top: 4px dashed #FA8072;
 }
 
+#store-locations {
+  padding-bottom: 15px;
+  border-bottom: 4px dashed #FA8072;
+}
+
+#footer {
+  position:fixed;
+  /*right:0px;*/
+  left:435px;
+  bottom:0px;
+  height:30px;
+  width:960px;
+  background:#D0D6FB;
+  text-align: center;
+  border-top: 4px solid salmon;
+}
+
 .round-pic {
   border-radius: 50%;
   width:15%;
