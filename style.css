@@ -5,40 +5,25 @@
   box-sizing: border-box; /*padding can't affect box size*/
   /*font-weight: normal;*/
   /*border: 1px black solid*/
-}
-
-@font-face {
-  /*font-family: 'Macondo', cursive;*/
-  font-family: 'Indie Flower', cursive;
-  src: url('https://fonts.googleapis.com/css?family=Macondo');
-  src: url('https://fonts.googleapis.com/css?family=Indie+Flower');
+  font-family: 'Bubblegum Sans', cursive;
 }
 
 html, body {
   height: 100%;
-  /*height: 2000px;*/
 }
 
 body {
-  /*width: 960px;*/
-  /*height: 1300px;*/
   margin: 0 auto;
   background: url(images/seattle-evening-wheel.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /*font-family: 'Patua One', cursive;*/
 
 }
 
-/*#title {
-  font-family: Indie Flower;
-  font-size: 8em;
-}*/
-
 #contact-us {
-  height: 350px;
+  height: 335px;
   width: 200px;
   position: fixed;
   top: 100px;
@@ -46,6 +31,10 @@ body {
   background-color: white;
   border: 2px solid salmon;
   border-radius: 1%;
+}
+
+#header-paragraph{
+  font-family:  font-family: 'Bubblegum Sans', cursive;
 }
 
 #cartoon-fish {
@@ -57,18 +46,16 @@ body {
 #store-information {
   font-family: verdana;
   font-size: 2em;
-  border-top: 4px dashed #FA8072;
+  border-top: 4px solid #FA8072;
 }
 
 #store-locations {
   padding-bottom: 15px;
-  border-bottom: 4px dashed #FA8072;
+  border-bottom: 4px solid #FA8072;
 }
 
 #family-pic-box {
   padding-bottom: 4px;
-  /*border-left: 4px solid salmon;*/
-  /*border-right: 4px solid salmon;*/
 }
 
 #diy {
@@ -114,19 +101,16 @@ body {
 
 #chinook-pic {
   width: 400px;
-  /*margin-left: 525px;*/
+
 }
 
 #coming-soon {
-  /*display: inline-block;*/
   font-size: 3em;
 }
 
 #footer {
   position:fixed;
-  /*margin: 0 auto;*/
   right:0px;
-  /*left:435px;*/
   bottom:0px;
   height:30px;
   width:100%;
@@ -208,32 +192,28 @@ a {
   font-size: 1em;
 }
 
-/*main {
-  position: relative;
-}*/
-
 .empty-space {
   height: 100px;
 }
 
 #pike-info {
-margin-left: 40px;
+margin-left: 50px;
 }
 
 #caphill-info {
-margin-left: 100px;
+margin-left: 105px;
 }
 
 #seatac-info {
-margin-left: 120px;
+margin-left: 128px;
 }
 
 #seacenter-info {
-margin-left: 115px;
+margin-left: 122px;
 }
 
 #alki-info {
-margin-left: 120px;
+margin-left: 125px;
 width: auto;
 }
 
@@ -244,6 +224,7 @@ width: auto;
 
 
 #main-content {
+  font-family: 'Bubblegum Sans', cursive;
   border-top: 4px solid salmon;
   border-right: 4px solid salmon;
   border-left: 4px solid salmon;
